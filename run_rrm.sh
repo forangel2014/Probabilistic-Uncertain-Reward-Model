@@ -1,16 +1,16 @@
-exp_dir=./exp_rm/rrm
-base_model=/mnt/workspace/user/chenhao/pretrained_models/Llama-3.1-8B-Instruct
+exp_dir=./exp/rrm
+base_model=<your_reward_model_path>
 
 if [ ! -d ${exp_dir} ];then  
     mkdir -p ${exp_dir}
 fi
 
-train_files=/cpfs/user/sunwangtao/dataset/uncertain/purm_preference_data-train
-valid_files=/cpfs/user/sunwangtao/dataset/uncertain/purm_preference_data-valid
+train_files=./dataset/preference_ppo-train
+valid_files=./dataset/preference_ppo-valid
 cp ./run_rrm.sh ${exp_dir}
 
 deepspeed \
-    --include localhost:0,1,2,3,4,5,6,7 \
+    --include localhost:0,1,2,3 \
     --master_port 10170 \
     rrm.py \
     --model_name_or_path ${base_model} \

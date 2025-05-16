@@ -1,12 +1,12 @@
-exp_dir=./exp/purm1
-base_model=/mnt/workspace/user/chenhao/pretrained_models/Llama-3.1-8B-Instruct
+exp_dir=./exp/purm
+base_model=<your_reward_model_path>
 
 if [ ! -d ${exp_dir} ];then
     mkdir -p ${exp_dir}
 fi
 
-train_files=/cpfs/user/sunwangtao/dataset/uncertain/purm_preference_data-train
-valid_files=/cpfs/user/sunwangtao/dataset/uncertain/purm_preference_data-valid
+train_files=./dataset/preference_ppo-train
+valid_files=./dataset/preference_ppo-valid
 cp ./run_purm.sh ${exp_dir}
 
 deepspeed \

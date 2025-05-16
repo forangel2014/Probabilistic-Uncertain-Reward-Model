@@ -9,36 +9,31 @@ color_mapping = {
     "BTRM": '#ff7f00',
     "PURM": '#1f77b4',
     "BTE-mean": 'green',
+    "BTE-WCO": 'darkblue',
     "BTE-UWO": 'purple',
     "RRM": '#777777',
-    "PURM_RERUN_10": '#1f77b4',  # 使用与PURM相同的颜色
+    "BRME": "yellowgreen",
     "λ = 0": 'brown',
     "λ = 1": 'red',
     "λ = 5": 'orange',
-    "λ = 20": 'purple',
     "λ = 30": 'green',
     "λ = 50": 'darkblue',
     "PURM penalize w/ σ": 'purple'
-
 }
-
 # 实验名称到显示名称的映射
 display_name_mapping = {
     "hh_rlhf_btrm": "BTRM",
-    "hh_rlhf_purm_rerun_10": "PURM_window_10000",
+    "hh_rlhf_purm": "PURM",
     "hh_rlhf_brme": "BRME",
     "hh_rlhf_rrm": "RRM",
-    "hh_rlhf_bte_rerun": "BTE-mean",
+    "hh_rlhf_bte_mean": "BTE-mean",
+    "hh_rlhf_bte_wco": "BTE-WCO",
     "hh_rlhf_bte_uwo1": "BTE-UWO",
     "hh_rlhf_purm_penalty_0": "λ = 0",
-    "hh_rlhf_purm_penalty_1": "λ = 1",
     "hh_rlhf_purm_penalty_5": "λ = 5",
-    "hh_rlhf_purm_window_1000000_penalty_20": "λ = 20",
     "hh_rlhf_purm_window_1000000_penalty_30": "λ = 30",
     "hh_rlhf_purm_penalty_50": "λ = 50",
-    "hh_rlhf_purm_sigma_as_uncertainty1": "PURM penalize w/ σ",
-    "hh_rlhf_purm_quick_window_100000": "PURM_window_100000",
-    "hh_rlhf_purm_quick_window_1000000": "PURM"
+    "hh_rlhf_purm_sigma_as_uncertainty": "PURM penalize w/ σ",
 }
 
 def read_win_rate(file_path):
