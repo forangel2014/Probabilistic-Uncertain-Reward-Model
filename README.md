@@ -1,3 +1,5 @@
+## Probilistic Uncertain Reward Model
+
 ### preparation
 ```
 pip install -r requirement.txt
@@ -6,12 +8,12 @@ python process_preference.py
 python process_rlhf.py
 ```
 
-### reward model training
+### reward model training (4 GPUs)
 ```
 bash run_purm.sh
 ```
 
-### RLHF with PURM
+### RLHF with PURM (8 GPUs)
 ```
 cd Open_RLHF
 CUDA_VISIBLE_DEVICES=7 python reward_server.py
